@@ -1,11 +1,21 @@
-let sign = " ";
+let board = "";
+let size = 8;
+let length = 0;
 
-for (let i = 0; i < 8;) {
-	console.log("\n")
-	i++;
-	for (let j = 0; j < 8; j++) {
-		sign += "#";
-		console.log(sign)
-
+for (;length < size; length++) {
+	for (let width = 0; width < size; width++){
+		if (length % 2 !== 0) {
+			black = " ";
+            white = "#";
+		} else {
+			black = "#";
+            white = " ";
+		} if (width % 2 === 0) {
+            board += white;
+        } else {
+            board += black;
+        }
 	}
+	board += "\n";
 }
+console.log(board);
